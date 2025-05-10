@@ -1,7 +1,7 @@
 body {
-  background-color: #1e1e2f;
+  background-color: #E5D4BA;
   color: #f0f0f0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Montserrat Light', montserrat;
   text-align: center;
   padding-top: 50px;
   margin: 0;
@@ -21,7 +21,7 @@ h1 {
 #rollButton {
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #4e6cff;
+  background-color: #4E0C00;
   color: white;
   border: none;
   border-radius: 12px;
