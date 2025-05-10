@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Date Dice 🎲</title>
+  <title>Rzut Kostką</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <img src="twoje-logo.png" alt="Moje Logo" class="logo">
+
   <div class="container">
-    <h1>Roll the dice and get a date question 💬</h1>
-    <button id="rollButton">Roll the Dice 🎲</button>
-    <div id="diceResult"></div>
-    <div id="questionBox"></div>
+    <h1>Rzuć kostką!</h1>
+    <button id="rollButton">Rzuć</button>
+    <div id="diceResult">🎲</div>
+    <div id="questionBox">Tu pojawi się wynik lub pytanie</div>
   </div>
 
-  <script src="script.js"></script>
+  <audio id="diceSound" src="dice-sound.mp3" preload="auto"></audio>
+
+  <script>
+    const rollButton = document.getElementById('rollButton');
+    const diceResult = document.getElementById('diceResult');
+    const diceSound = document.getElementById('diceSound');
+
+    rollButton.addEventListener('click', () => {
+      diceSound.currentTime = 0;
+      diceSound.play();
+
+      const roll = Math.floor(Math.random() * 6) + 1;
+      diceResult.textContent = `🎲 ${roll}`;
+    });
+  </script>
+
 </body>
 </html>
